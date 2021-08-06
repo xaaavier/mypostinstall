@@ -1,9 +1,9 @@
 #!/bin/bash
 ## Variables
 ### Logiciels à supprimer
-bloats="baobab cheese epiphany gnome-{machine,software,calendar,characters,clocks,contacts,dictionary,font-viewer,logs,maps,photos,user-docs,weather} gucharmap sushi abrtd*"
+bloats="baobab cheese epiphany gnome-{boxes,software,calendar,characters,clocks,contacts,dictionary,font-viewer,logs,maps,photos,user-docs,weather} gucharmap sushi abrtd* yelp totem"
 ### Logiciels à ajouter
-addsoftwares="bluefish filezilla keepassxc gimp wget optimizer evolution libreoffice-langpack-fr lollypop qownnotes terminator tcpdump gnome-tweaks gnome-extensions-app vivaldi-stable wireshark gnome-shell-extension-user-theme gnome-shell-extension-gsconnect picard balena-etcher-electron sublime-text sublime-merge virt-manager"
+addsoftwares="bluefish filezilla keepassxc gimp wget optimizer evolution libreoffice-langpack-fr lollypop qownnotes terminator tcpdump gnome-tweaks gnome-extensions-app vivaldi-stable wireshark gnome-shell-extension-user-theme gnome-shell-extension-gsconnect picard balena-etcher-electron sublime-text sublime-merge virt-manager vlc"
 
 if [[ $EUID -ne 0 ]]
 then
