@@ -62,8 +62,8 @@ echo -e '\n\e[0;36m'"Générer des clefs de chiffrement SSH? \e[0;m(\e[1;32mo\e[
 	read sshc
 		if [ "$sshc" = 'o' ]
 			then
-				ssh-keygen -a 100 -t ed25519 -C "xfrancois@vivaldi.net" -N "" -f ~/.ssh/id_ed25519 2>/dev/null
-				ssh-keygen -b 4096 -t rsa -C "xfrancois@vivaldi.net" -N "" -f ~/.ssh/id_rsa 2>/dev/null
+				ssh-keygen -a 100 -t ed25519 -C "*****@***.com" -N "" -f ~/.ssh/id_ed25519 2>/dev/null
+				ssh-keygen -b 4096 -t rsa -C "*****@***.com" -N "" -f ~/.ssh/id_rsa 2>/dev/null
 				echo -e '\e[0;31m'Des clefs SSH ont étés générées!'\e[0;m'
 			else
 				echo
@@ -88,14 +88,14 @@ echo -e '\e[0;31m'"Third party software activé!"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 2>/dev/null
 echo -e '\e[0;31m'"Le dépot Flathub est installé.."'\e[0;m'
 ##### Vivaldi
-sudo dnf install dnf-utils -y 2>/dev/null
-sudo dnf config-manager --add-repo https://repo.vivaldi.com/archive/vivaldi-fedora.repo 2>/dev/null
+dnf install dnf-utils -y 2>/dev/null
+dnf config-manager --add-repo https://repo.vivaldi.com/archive/vivaldi-fedora.repo 2>/dev/null
 echo -e '\e[0;31m'"Le dépot de Vivaldi est installé.."'\e[0;m'
 ##### Balena Etcher
 curl -1sLf 'https://dl.cloudsmith.io/public/balena/etcher/setup.rpm.sh' | -E bash 2>/dev/null
 ##### Sublime
-sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg 2>/dev/null
-sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo 2>/dev/null
+rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg 2>/dev/null
+dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo 2>/dev/null
 
 }
 
